@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
-import './homePage.dart';
+import 'homePage.dart';
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    title: 'Hero Hub',
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+    ),
+    initialRoute: '/',
+    routes: {
+      '/': (context) => LoginPage(),
+      '/home': (context) => HomePage(),
+      // '/events': (context) => EventsPage(),
+      // '/profile': (context) => ProfilePage(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
